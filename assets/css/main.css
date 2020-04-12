@@ -1816,11 +1816,24 @@ input, select, textarea {
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
 				flex-direction: column;
+				padding:  0;
+				margin: 0;
 			}
 
 				.gallery article {
-					width: 100%;
+					width: 50%;
+					padding: 0;
+					margin: 0;
+					
 				}
+
+			.para{
+				display: block;
+				margin: 0 0 0 5em;
+				height: 30%;
+				width: 100%;
+				
+			}
 
 		}
 
@@ -2149,7 +2162,11 @@ input, select, textarea {
 
 			.main.style3 {
 				text-align: center;
-				padding: 3em 10px 3em 10px;
+				
+				padding-top: 3em;
+  			
+ 				 padding-bottom: 3em;
+ 				 
 			}
 
 		}
