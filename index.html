@@ -20,10 +20,15 @@
 
 		<script >
 		  function popup(){
-			swal("Welcome to the Community.","We hope you have a great time.", "success")
-	  .then((value) => {
-		location.reload();
+			if(document.getElementById("name").value != '' && document.getElementById("formemail").value !=''){  
+			swal("Welcome to the Community.","We hope you have a great time.", "success").then((value) => {
+			location.reload();
 	  });
+			}
+			else{
+				alert("Please fill in the details");
+			}
+
 	  }
 	  
 	  </script>
@@ -32,6 +37,7 @@
 			<header id="header">
 				<h1>OnPoint Accomodation</h1>
 				<nav>
+				
 					<ul>
 						<li><a href="#intro">Intro</a></li>
 						<li><a href="#one">What We Do</a></li>
@@ -42,15 +48,22 @@
 				</nav>
 			</header>
 
+
+			
+
 		<!-- Intro -->
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2>Having Rental Issues?</h2>
+						<div style="background: white;border-radius: 5px;opacity: 70%;">
+							<h2 >Having Rental Issues?</h2>
+						</div>
 					</header>
-					<p id = "text">Here's an app for International students which you makes you take the right decision 
-						while   <br />
-						choosing the right accomodation when you are moving to another country.</p>
+					<div style="background: white;border-radius: 5px;opacity: 70%; width: 75%; margin: 0 auto;">
+
+					<p id = "text">Here's an app for <i>International students</i> which you makes you take the right decision 
+						while choosing the right accomodation when you are moving to another country.</p>
+						</div>
 					<footer>
 						<a href="#one" class="button style2 down">More</a>
 					</footer>
@@ -63,7 +76,7 @@
 					<header>
 						<h2>What we do?</h2>
 					</header>
-					<p>We have created an app to solve the rental issues faced by students who moved to different countries to study. As those students, doesn't know much about the process of renting and the landlords end up exploiting them.</p>
+					<p>Moving to a new country can be daunting with finding food, friends, accomodation, jobs. We have got you worry about one thing less and probably the biggest of all, that is accomodation. We manage everything in your stay in finding the right place, paperwork and make sure you are always informed.</p>
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
@@ -74,7 +87,7 @@
 					<header>
 						<h2>Why us?</h2>
 					</header>
-					<p>Our app provides only certified accomodations with all the features you want. It is customizable and you can add any features you like in your accomodation, and will provide you with all the process you need to do.</p>
+					<p>Our app provides certified accomodations with all the customizable features you want and we will handle everything else from the perfect search to a smooth transition in every stage of your stay.</p>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
@@ -84,7 +97,7 @@
 				<div class="content">
 					<header>
 						<h2>Advantages</h2>
-						<p>International Students goes through lots of problems in the new country, one of those problems is Accomodation. So, for this problem, we created an app which helps you in the following:</p>
+						<p>International Students goes through lot of problems in a new country, one of the paramount problem is finding the right accomodation. Here is our solution to the problem.</p>
 					</header>
 
 					<!-- Gallery  -->
@@ -130,11 +143,11 @@
 							<div class="fields">
 								
 								<div class="field half form-group">
-									<input type="text" name="entry.1440002202" placeholder="Name*" required />
+									<input id="name" type="text" name="entry.1440002202" placeholder="Name*" required />
 									<div class="validation"></div>
 								</div>
 								<div class="field half form-group">
-									<input type="email" name="emailAddress" placeholder="Email*" required/>
+									<input id="formemail" type="email" name="emailAddress" placeholder="Email*" required/>
 									<div class="validation"></div>
 								</div>
 								
